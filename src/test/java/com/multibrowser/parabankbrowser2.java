@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Dictionary;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.By.ById;
@@ -55,12 +56,13 @@ public class parabankbrowser2 {
     	System.setProperty("webdriver.gecko.driver", "C:\\Users\\vinodhinima\\eclipse-workspace\\Demomaven\\src\\test\\resources\\geckodriver.exe");
         Driver = new FirefoxDriver();
         
-        
+        Logger Log = Logger.getLogger(parabankbrowser2.class.getName());   
     }
     
     @AfterClass
     public void afterClass() {
         Driver.quit();
+        Logger Log = Logger.getLogger(parabankbrowser2.class.getName());  
     }
 
    
@@ -196,7 +198,7 @@ public class parabankbrowser2 {
             Assert.assertTrue(true);
          	
         	 Reporter.log("TestNG_ReportsAndLogs -> Registration", true);	
-        	
+        	 Logger Log = Logger.getLogger(parabankbrowser2.class.getName());  
     }
     
    
