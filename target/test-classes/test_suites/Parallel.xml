@@ -4,8 +4,8 @@
  <test name="Parallel scenario">  <!-- Runs Sample and Paremeter class parallely -->
  
  <classes>    
- <class name="com.multibrowser.parallelbrowser"/> 
+ <class name="com.multibrowser.parallelbrowser"/>
  <class name="com.multibrowser.parabankbrowser2"/>     
- </classes>  
+ </classes>
  </test>
  </suite>
