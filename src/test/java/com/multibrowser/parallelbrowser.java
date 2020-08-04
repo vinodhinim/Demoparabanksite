@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -41,6 +42,8 @@ public class parallelbrowser {
     ExtentReports extent;
     //helps to generate the logs in test report.
     ExtentTest test;
+    
+    Logger Log = Logger.getLogger(parabankbrowser2.class.getName()); 
 
     @BeforeClass
     public void beforeClass() {

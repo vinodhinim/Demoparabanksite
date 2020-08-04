@@ -44,7 +44,8 @@ public class parabankbrowser2 {
     ExtentTest test;
 	
 	 Fillomethods FM = new Fillomethods();
-	 Properties obj = new Properties();					
+	 Properties obj = new Properties();		
+	 Logger Log = Logger.getLogger(parabankbrowser2.class.getName()); 
    
      
 	 //seleniumcommo_methods SCM = new seleniumcommo_methods();
@@ -56,13 +57,13 @@ public class parabankbrowser2 {
     	System.setProperty("webdriver.gecko.driver", "C:\\Users\\vinodhinima\\eclipse-workspace\\Demomaven\\src\\test\\resources\\geckodriver.exe");
         Driver = new FirefoxDriver();
         
-        Logger Log = Logger.getLogger(parabankbrowser2.class.getName());   
+          
     }
     
     @AfterClass
     public void afterClass() {
         Driver.quit();
-        Logger Log = Logger.getLogger(parabankbrowser2.class.getName());  
+        
     }
 
    
@@ -198,7 +199,7 @@ public class parabankbrowser2 {
             Assert.assertTrue(true);
          	
         	 Reporter.log("TestNG_ReportsAndLogs -> Registration", true);	
-        	 Logger Log = Logger.getLogger(parabankbrowser2.class.getName());  
+        	 //Logger Log = Logger.getLogger(parabankbrowser2.class.getName());  
     }
     
    
