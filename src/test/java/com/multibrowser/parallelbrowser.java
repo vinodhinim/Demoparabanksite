@@ -1,11 +1,9 @@
 package com.multibrowser;
 
-import java.util.ArrayList;
-import java.util.Dictionary;
-import java.util.Hashtable;
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,13 +25,11 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-import com.codoid.products.fillo.Connection;
-import com.codoid.products.fillo.Fillo;
-import com.codoid.products.fillo.Recordset;
 
+//@Listeners({TestListener.class, ReportListener.class, DriverListener.class, RestListener.class})
 public class parallelbrowser {
 	
-	
+	 private static final Logger logger = LogManager.getLogger();
     private WebDriver driver;
     
   //builds a new report using the html template 
@@ -42,11 +38,10 @@ public class parallelbrowser {
     ExtentReports extent;
     //helps to generate the logs in test report.
     ExtentTest test;
-    
-    Logger Log = Logger.getLogger(parabankbrowser2.class.getName()); 
 
     @BeforeClass
     public void beforeClass() {
+    	logger.info("Driver initialisation");
     	System.setProperty("webdriver.gecko.driver", "C:\\Users\\vinodhinima\\eclipse-workspace\\Demomaven\\src\\test\\resources\\geckodriver.exe");
         driver = new FirefoxDriver();
     }
@@ -54,6 +49,7 @@ public class parallelbrowser {
    @AfterClass
     public void afterClass() {
         driver.quit();
+        logger.info("Driver Close");
     }
 
    @BeforeTest
@@ -71,11 +67,12 @@ public class parallelbrowser {
        //configuration items to change the look and feel
        //add content, manage tests etc
        htmlReporter.config().setChartVisibilityOnOpen(true);
-       htmlReporter.config().setDocumentTitle("Extent Report Parabank Browser 2");
+       htmlReporter.config().setDocumentTitle("Extent Report Demo");
        htmlReporter.config().setReportName("Test Report");
        htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
        htmlReporter.config().setTheme(Theme.STANDARD);
        htmlReporter.config().setTimeStampFormat("EEEE, MMMM dd, yyyy, hh:mm a '('zzz')'");
+       logger.info("Extent Report");
    }
     @Test
     public void verifySearchButton() {
@@ -94,6 +91,7 @@ public class parallelbrowser {
         Assert.assertEquals(text, search_text, "Text not found!");
         test = extent.createTest("Parallel browser 1 execution", "PASSED test case");
         Assert.assertTrue(true);
+        logger.info("Verify SearchButton");
     }
     
     @AfterMethod
@@ -109,6 +107,8 @@ public class parallelbrowser {
             test.log(Status.SKIP, MarkupHelper.createLabel(result.getName()+" SKIPPED ", ExtentColor.ORANGE));
             test.skip(result.getThrowable());
         }
+        
+        logger.info("Log get result");
     }
      
     @AfterTest
