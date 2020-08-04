@@ -91,6 +91,7 @@ public class parallelbrowser {
         Assert.assertEquals(text, search_text, "Text not found!");
         test = extent.createTest("Parallel browser 1 execution", "PASSED test case");
         Assert.assertTrue(true);
+        
         logger.info("Verify SearchButton");
     }
     
@@ -108,7 +109,7 @@ public class parallelbrowser {
             test.skip(result.getThrowable());
         }
         
-        logger.info("Log get result");
+        //logger.info("Log get result");
     }
      
     @AfterTest

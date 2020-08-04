@@ -38,3 +38,14 @@
 2020-07-17 21:56:26.023 [TestNG-test=Default test-1] INFO  com.maveric.core.driver.DriverFactory - useNewWDA : false
 2020-07-17 21:56:30.061 [TestNG-test=Default test-1] INFO  com.maveric.core.testng.listeners.DriverListener - Driver Setup Completed
 2020-07-17 21:56:30.063 [TestNG-test=Default test-1] INFO  com.maveric.core.testng.listeners.DriverListener - Driver Quit Completed
+2020-08-04 19:56:38.687 [main] INFO  com.multibrowser.parallelbrowser - Extent Report
+2020-08-04 19:56:38.723 [main] INFO  com.multibrowser.parallelbrowser - Driver initialisation
+2020-08-04 20:00:29.469 [main] INFO  com.multibrowser.parabankbrowser2 - Driver initialisation paralelly
+2020-08-04 20:01:39.690 [main] INFO  com.multibrowser.parabankbrowser2 - Quit Driver
+2020-08-04 20:03:51.569 [main] INFO  com.multibrowser.parabankbrowser2 - Driver initialisation paralelly
+2020-08-04 20:05:02.797 [main] INFO  com.multibrowser.parabankbrowser2 - Quit Driver
+2020-08-04 22:11:15.965 [main] INFO  com.multibrowser.parabankbrowser2 - Driver initialisation paralelly
+2020-08-04 22:15:42.229 [main] INFO  com.multibrowser.parallelbrowser - Extent Report
+2020-08-04 22:15:42.261 [main] INFO  com.multibrowser.parallelbrowser - Driver initialisation
+2020-08-04 22:15:57.062 [main] INFO  com.multibrowser.parallelbrowser - Verify SearchButton
+2020-08-04 22:16:00.233 [main] INFO  com.multibrowser.parallelbrowser - Driver Close

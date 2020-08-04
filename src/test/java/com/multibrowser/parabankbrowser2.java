@@ -203,7 +203,7 @@ public class parabankbrowser2 {
             Assert.assertTrue(true);
          	
         	 Reporter.log("TestNG_ReportsAndLogs -> Registration", true);	
-        	 logger.info("Registration");
+        	logger.info("Registration");
         	
     }
     
