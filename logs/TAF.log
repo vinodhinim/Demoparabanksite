@@ -49,3 +49,10 @@
 2020-08-04 22:15:42.261 [main] INFO  com.multibrowser.parallelbrowser - Driver initialisation
 2020-08-04 22:15:57.062 [main] INFO  com.multibrowser.parallelbrowser - Verify SearchButton
 2020-08-04 22:16:00.233 [main] INFO  com.multibrowser.parallelbrowser - Driver Close
+2020-08-04 22:20:29.698 [main] INFO  com.multibrowser.parallelbrowser - Extent Report
+2020-08-04 22:20:29.739 [TestNG-test=Parallel scenario-1] INFO  com.multibrowser.parallelbrowser - Driver initialisation
+2020-08-04 22:20:50.790 [TestNG-test=Parallel scenario-2] INFO  com.multibrowser.parabankbrowser2 - Driver initialisation paralelly
+2020-08-04 22:20:53.899 [TestNG-test=Parallel scenario-1] INFO  com.multibrowser.parallelbrowser - Verify SearchButton
+2020-08-04 22:21:02.869 [TestNG-test=Parallel scenario-1] INFO  com.multibrowser.parallelbrowser - Driver Close
+2020-08-04 22:21:40.255 [TestNG-test=Parallel scenario-2] INFO  com.multibrowser.parabankbrowser2 - Registration
+2020-08-04 22:21:42.421 [TestNG-test=Parallel scenario-2] INFO  com.multibrowser.parabankbrowser2 - Quit Driver
